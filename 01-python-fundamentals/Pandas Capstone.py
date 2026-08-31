@@ -14,6 +14,7 @@ print(f"Sales by Category, sorted highest to lowest:\n{category_sales.round(2)}\
 # 3. A quick chart
 region_summary["Profit"].plot(kind="bar", title="Profit by Region")
 print("Profit by Region chart displayed.\n")
+plt.show()
 
 # 4. Quantity Sold by Sub-Category, sorted highest to lowest
 subcat_quantity = df.groupby("Sub-Category")["Quantity"].sum().sort_values(ascending=False)
@@ -22,6 +23,7 @@ print(f"Quantity Sold by Sub-Category, sorted highest to lowest:\n{subcat_quanti
 # 5. A quick chart
 subcat_quantity.plot(kind="bar", title="Quantity Sold by Sub-Category")
 print("Quantity Sold by Sub-Category chart displayed.\n")
+plt.show()
 
 # 6. Average Sales and Profit by Segment
 segment_summary = df.groupby("Segment")[["Sales", "Profit"]].mean()
